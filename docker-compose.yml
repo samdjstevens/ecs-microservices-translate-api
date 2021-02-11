@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    image: samdjstevens/ecs-microservices-translate-api:latest
+    ports:
+      - "8080:8080"
+
+#    bind local aws credentials to the container
+    volumes:
+      - "~/.aws/credentials:/root/.aws/credentials"
+
+#    or pass them in via environment variables
+#    environment:
+#      - AWS_ACCESS_KEY_ID=access_key_id_here
+#      - AWS_SECRET_ACCESS_KEY=secret_access_key_here
+#      - AWS_REGION=region_here
