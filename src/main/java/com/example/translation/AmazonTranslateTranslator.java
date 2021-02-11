@@ -1,9 +1,11 @@
 package com.example.translation;
 
+import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.translate.TranslateClient;
 import software.amazon.awssdk.services.translate.model.TranslateTextRequest;
 import software.amazon.awssdk.services.translate.model.TranslateTextResponse;
 
+@Service
 class AmazonTranslateTranslator implements Translator {
 
     private final TranslateClient amazonTranslate;

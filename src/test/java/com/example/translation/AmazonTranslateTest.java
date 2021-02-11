@@ -41,9 +41,9 @@ public class AmazonTranslateTest {
 
     static Stream<Arguments> getTranslationExamples() {
         return Stream.of(
-            arguments("EN", "DE", "Hello World!", "Hallo Welt!"),
-            arguments("DE", "EN", "Hallo Welt!", "Hello World!"),
-            arguments("EN", "FR", "Hello World!", "Bonjour le monde!")
+            arguments("en", "de", "Hello World!", "Hallo Welt!"),
+            arguments("de", "en", "Hallo Welt!", "Hello World!"),
+            arguments("en", "fr", "Hello World!", "Bonjour le monde!")
         );
     }
 
