@@ -1,4 +1,5 @@
 FROM azul/zulu-openjdk-alpine:11-jre
-COPY build/libs/*.jar app.jar
-EXPOSE 80
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+COPY build/dependency/BOOT-INF/lib /app/lib
+COPY build/dependency/META-INF /app/META-INF
+COPY build/dependency/BOOT-INF/classes /app
+ENTRYPOINT ["java", "-cp", "app:app/lib/*", "com.example.translation.TranslationApplication"]
