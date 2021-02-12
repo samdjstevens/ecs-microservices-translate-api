@@ -3,7 +3,7 @@ services:
   app:
     image: samdjstevens/ecs-microservices-translate-api:latest
     ports:
-      - "8080:8080"
+      - "8080:80"
 
 #    bind local aws credentials to the container
     volumes:
